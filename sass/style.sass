@@ -1,0 +1,99 @@
+=tx-style 
+    font-size: $fSize1
+    text-align: justify
+    display: table-cell
+    vertical-align: middle
+    @media only screen and (max-width: 960px)
+        font-size: 1.2em
+
+=a-hover ($fontS)
+    color: black
+    font-weight: 500
+    font-size: $fontS
+    margin-right: 2em
+    border-bottom: $brd $clr3
+    padding-top: -10px
+
+    &:hover 
+        color: $clr3
+        text-decoration: none
+        outline: none
+        border-bottom: $brd black
+    
+$fSize1: 1.5em
+$fSize2: 1.8em 
+$brd: 3px solid
+$clr1: #607bf3
+$clr2: #1b3b92
+$clr3: #0084ff
+   
+
+.main-menu a
+   +a-hover ($fSize1)
+
+.tx1-1 
+    border: $brd $clr1
+    padding: 20px
+    font-size: $fSize2
+    text-align: justify
+    @media only screen and (max-width: 960px)
+        font-size: 1.3em
+        padding: 10px
+
+.tx1-2
+    border-top: $brd $clr2
+    border-bottom: $brd $clr2
+    color: black
+    +tx-style
+    align-self: end
+     
+.tx2-1
+    +tx-style
+    border-top: $brd $clr3
+    border-right: $brd $clr3
+    margin-top: 0
+    line-height: 2em
+    font-weight: 500
+    @media only screen and (max-width: 960px)
+        font-weight: 400 
+
+.col.tx2-2
+    +tx-style
+    color: $clr3
+    padding-left: 2em
+    padding-right: 2em
+    @media only screen and (max-width: 960px)
+        padding-left: 1em
+        padding-right: 1em    
+
+
+.tx2-3
+    +tx-style 
+    font-weight: 600
+    text-shadow: 1px 1px 2px black
+    letter-spacing: 2px
+    line-height: 1.5em
+    background: repeating-linear-gradient(-45deg, #0000ff35, #0000ff35 5px, transparent 8px, transparent 15px)
+    @media only screen and (max-width: 960px)
+        background: #0000ff35
+
+    
+          
+
+.img1
+    max-height: 200px
+
+.tx3-1
+    border-left: $brd $clr1
+    border-right: $brd $clr1
+    +tx-style 
+
+.footer-text
+    font-size: 1.2em
+    font-weight: 400
+    letter-spacing: 2px
+    @media only screen and (max-width: 960px)
+        font-size: 1em
+
+.footer-a
+    +a-hover (1em)
