@@ -1,15 +1,24 @@
-.main-menu a {
-  color: black;
-  font-weight: 500;
-  font-size: 1.5em;
-  margin-right: 2em;
-  border-bottom: 3px solid #0084ff;
-  padding-top: -10px; }
-  .main-menu a:hover {
-    color: #0084ff;
-    text-decoration: none;
-    outline: none;
-    border-bottom: 3px solid black; }
+.main-menu {
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+  background: #fff;
+  padding-bottom: 10px; }
+  .main-menu a {
+    color: black;
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-right: 2em;
+    border-bottom: 3px solid #0084ff;
+    padding-top: -10px; }
+    .main-menu a:hover {
+      color: #0084ff;
+      border-bottom: 3px solid black;
+      transition-property: color, border-bottom-color;
+      transition-duration: .3s;
+      transition-timing-function: linear;
+      text-decoration: none;
+      outline: none; }
 
 .tx1-1 {
   border: 3px solid #607bf3;
@@ -25,25 +34,25 @@
   border-top: 3px solid #1b3b92;
   border-bottom: 3px solid #1b3b92;
   color: black;
+  align-self: end;
   font-size: 1.5em;
   text-align: justify;
   display: table-cell;
-  vertical-align: middle;
-  align-self: end; }
+  vertical-align: middle; }
   @media only screen and (max-width: 960px) {
     .tx1-2 {
       font-size: 1.2em; } }
 
 .tx2-1 {
-  font-size: 1.5em;
-  text-align: justify;
-  display: table-cell;
-  vertical-align: middle;
   border-top: 3px solid #0084ff;
   border-right: 3px solid #0084ff;
   margin-top: 0;
   line-height: 2em;
-  font-weight: 500; }
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: justify;
+  display: table-cell;
+  vertical-align: middle; }
   @media only screen and (max-width: 960px) {
     .tx2-1 {
       font-size: 1.2em; } }
@@ -52,13 +61,13 @@
       font-weight: 400; } }
 
 .col.tx2-2 {
+  color: #0084ff;
+  padding-left: 2em;
+  padding-right: 2em;
   font-size: 1.5em;
   text-align: justify;
   display: table-cell;
-  vertical-align: middle;
-  color: #0084ff;
-  padding-left: 2em;
-  padding-right: 2em; }
+  vertical-align: middle; }
   @media only screen and (max-width: 960px) {
     .col.tx2-2 {
       font-size: 1.2em; } }
@@ -68,18 +77,28 @@
       padding-right: 1em; } }
 
 .tx2-3 {
-  font-size: 1.5em;
-  text-align: justify;
-  display: table-cell;
-  vertical-align: middle;
   font-weight: 600;
   text-shadow: 1px 1px 2px black;
   letter-spacing: 2px;
   line-height: 1.5em;
-  background: repeating-linear-gradient(-45deg, #0000ff35, #0000ff35 5px, transparent 8px, transparent 15px); }
+  padding-top: 3px;
+  background: repeating-linear-gradient(-45deg, #0000ff35, #0000ff35 5px, transparent 8px, transparent 15px);
+  font-size: 1.5em;
+  text-align: justify;
+  display: table-cell;
+  vertical-align: middle; }
   @media only screen and (max-width: 960px) {
     .tx2-3 {
       font-size: 1.2em; } }
+  .tx2-3:hover {
+    background: #00000000;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    border: 3px solid #0084ff;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0px; }
   @media only screen and (max-width: 960px) {
     .tx2-3 {
       background: #0000ff35; } }
@@ -115,8 +134,17 @@
   padding-top: -10px; }
   .footer-a:hover {
     color: #0084ff;
+    border-bottom: 3px solid black;
+    transition-property: color, border-bottom-color;
+    transition-duration: .3s;
+    transition-timing-function: linear;
     text-decoration: none;
-    outline: none;
-    border-bottom: 3px solid black; }
+    outline: none; }
+
+div.breakline {
+  border: 1px solid #00000035;
+  width: 90%;
+  margin-top: 2em;
+  margin-left: 40px; }
 
 /*# sourceMappingURL=style.css.map */

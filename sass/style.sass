@@ -16,9 +16,12 @@
 
     &:hover 
         color: $clr3
+        border-bottom: $brd black
+        transition-property: color, border-bottom-color
+        transition-duration: .3s
+        transition-timing-function: linear
         text-decoration: none
         outline: none
-        border-bottom: $brd black
     
 $fSize1: 1.5em
 $fSize2: 1.8em 
@@ -28,8 +31,15 @@ $clr2: #1b3b92
 $clr3: #0084ff
    
 
-.main-menu a
-   +a-hover ($fSize1)
+.main-menu 
+    position: sticky
+    top: 0px
+    z-index: 5
+    background: #fff
+    padding-bottom: 10px
+    
+    a
+        +a-hover ($fSize1)
 
 .tx1-1 
     border: $brd $clr1
@@ -44,36 +54,50 @@ $clr3: #0084ff
     border-top: $brd $clr2
     border-bottom: $brd $clr2
     color: black
-    +tx-style
     align-self: end
+    +tx-style
+        
      
 .tx2-1
-    +tx-style
     border-top: $brd $clr3
     border-right: $brd $clr3
     margin-top: 0
     line-height: 2em
     font-weight: 500
+    +tx-style
     @media only screen and (max-width: 960px)
         font-weight: 400 
 
 .col.tx2-2
-    +tx-style
     color: $clr3
     padding-left: 2em
     padding-right: 2em
+    +tx-style
     @media only screen and (max-width: 960px)
         padding-left: 1em
         padding-right: 1em    
 
 
-.tx2-3
-    +tx-style 
+.tx2-3 
     font-weight: 600
     text-shadow: 1px 1px 2px black
     letter-spacing: 2px
     line-height: 1.5em
+    padding-top: 3px
     background: repeating-linear-gradient(-45deg, #0000ff35, #0000ff35 5px, transparent 8px, transparent 15px)
+
+    +tx-style
+
+    &:hover
+        background: #00000000     
+        transition-property: background-color
+        transition-duration: 1s
+        transition-timing-function: linear
+        border: $brd $clr3
+        padding-left: 12px
+        padding-right: 12px
+        padding-top: 0px
+
     @media only screen and (max-width: 960px)
         background: #0000ff35
 
@@ -97,3 +121,9 @@ $clr3: #0084ff
 
 .footer-a
     +a-hover (1em)
+
+div.breakline
+    border: 1px solid #00000035
+    width: 90%
+    margin-top: 2em
+    margin-left: 40px
